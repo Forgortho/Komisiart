@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.*?>
+
+<BorderPane xmlns="http://javafx.com/javafx/21"
+            xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="controller.KomisiController"
+            prefWidth="1000" prefHeight="760"
+            stylesheets="@styles/app.css">
+    <top>
+        <VBox spacing="8" styleClass="header">
+            <HBox spacing="12" alignment="CENTER_LEFT">
+                <ImageView fx:id="logoView" fitWidth="56" fitHeight="56" preserveRatio="true"/>
+                <Label text="Komisi Art" styleClass="title"/>
+            </HBox>
+            <Label text="Katalog Komis." styleClass="muted"/>
+            <HBox spacing="12">
+                <VBox spacing="4" HBox.hgrow="ALWAYS">
+                    <Label text="Nama karakter"/>
+                    <TextField fx:id="karakterField" promptText="Contoh: Dazai Osamu"/>
+                </VBox>
+                <VBox spacing="4" HBox.hgrow="ALWAYS">
+                    <Label text="Jenis komisi"/>
+                    <ComboBox fx:id="jenisBox" onAction="#jenisChanged" maxWidth="Infinity"/>
+                </VBox>
+                <VBox spacing="4" HBox.hgrow="ALWAYS">
+                    <Label text="Harga (Rp)"/>
+                    <TextField fx:id="hargaField"/>
+                </VBox>
+            </HBox>
+            <Button text="Simpan Komisi" onAction="#saveKomisi" styleClass="button-primary"/>
+            <Label fx:id="pesanLabel" wrapText="true"/>
+            <HBox spacing="12" alignment="CENTER_LEFT">
+                <Label text="Tampilkan:"/>
+                <ComboBox fx:id="filterBox" onAction="#filterChanged"/>
+                <Label fx:id="jumlahLabel" text="Jumlah komisi: 0"/>
+            </HBox>
+        </VBox>
+    </top>
+    <center>
+        <ScrollPane fitToWidth="true" fitToHeight="false">
+            <content>
+                <TilePane fx:id="katalogPane" hgap="16" vgap="16"
+                          alignment="TOP_LEFT" tileAlignment="TOP_LEFT"
+                          styleClass="katalog"/>
+            </content>
+        </ScrollPane>
+    </center>
+</BorderPane>

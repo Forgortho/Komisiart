@@ -1,0 +1,33 @@
+.root {
+    -fx-font-family: "SansSerif";
+    -fx-font-size: 14px;
+    -fx-background-color: #f5f3ff;
+}
+.header { -fx-padding: 20 24; -fx-background-color: white; }
+.title { -fx-font-size: 28px; -fx-font-weight: bold; -fx-text-fill: #4338ca; }
+.muted { -fx-text-fill: #6b7280; -fx-font-size: 12px; }
+.text-field, .combo-box { -fx-padding: 7; -fx-background-radius: 7; }
+.button-primary {
+    -fx-background-color: #4f46e5;
+    -fx-text-fill: white;
+    -fx-padding: 8 16;
+    -fx-background-radius: 8;
+}
+.button-primary:hover { -fx-background-color: #4338ca; }
+.button-primary:disabled { -fx-background-color: #d1d5db; -fx-text-fill: #6b7280; }
+.button-hapus {
+    -fx-background-color: #fee2e2;
+    -fx-text-fill: #b91c1c;
+    -fx-padding: 8 12;
+    -fx-background-radius: 8;
+}
+.button-hapus:hover { -fx-background-color: #fecaca; }
+.katalog { -fx-padding: 20 24; }
+.kartu { -fx-background-color: white; -fx-background-radius: 12; -fx-padding: 16; }
+.nama-karakter { -fx-font-weight: bold; -fx-font-size: 16px; }
+.badge-jenis { -fx-text-fill: #4338ca; -fx-font-size: 12px; }
+.status { -fx-padding: 3 10; -fx-background-radius: 20; -fx-font-size: 12px; }
+.status-antri { -fx-background-color: #fef3c7; -fx-text-fill: #92400e; }
+.status-dikerjakan { -fx-background-color: #dbeafe; -fx-text-fill: #1e40af; }
+.status-selesai { -fx-background-color: #dcfce7; -fx-text-fill: #166534; }
+.scroll-pane, .scroll-pane > .viewport { -fx-background-color: transparent; }
